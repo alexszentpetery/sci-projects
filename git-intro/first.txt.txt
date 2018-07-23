@@ -1,3 +1,5 @@
 First GIT .
 
-Modificari Remote.
+
+
+Modificari Locale
