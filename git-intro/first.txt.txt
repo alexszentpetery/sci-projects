@@ -1,3 +1,5 @@
 First GIT .
-
+Modificari remote pentru generare conflict.
 Modificari Remote.
+
+Modificari remote pentru generare conflict.
