@@ -1,5 +1,8 @@
 First GIT .
 
-
-
 Modificari Locale
+
+
+Modificari Remote.
+
+Modificari remote pentru generare conflict.
