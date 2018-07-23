@@ -6,3 +6,5 @@ Modificari Locale
 Modificari Remote.
 
 Modificari remote pentru generare conflict.
+
+Modificare Pentru FETCH
