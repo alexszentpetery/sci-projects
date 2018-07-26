@@ -14,7 +14,13 @@ public class Main {
 
         System.out.println("scadere:" + calculator.scadere(Double.parseDouble(args[0]), Double.parseDouble(args[1])));
 
-        System.out.println("impartire:" + calculator.impartire(Double.parseDouble(args[0]), Double.parseDouble(args[1])));
+        if(Double.parseDouble(args[1])!=0){
+
+            System.out.println("impartire:" + calculator.impartire(Double.parseDouble(args[0]), Double.parseDouble(args[1])));
+                    }
+            else
+
+            System.out.println("ERROR ---- Impartirea la 0 nu este permisa ----");
 
         System.out.println("inmultire:" + calculator.inmultire(Double.parseDouble(args[0]), Double.parseDouble(args[1])));
 
