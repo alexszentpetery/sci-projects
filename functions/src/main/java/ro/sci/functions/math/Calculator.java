@@ -1,15 +1,52 @@
 package ro.sci.functions.math;
 
+/**
+ * Clasa folosita pentru calcule. un simplu calculator.
+ */
 public class Calculator {
-    public int aduna(int x, int y) {
-        return x + y;
+    /**
+     * Functie care aduna doua numere de tip double
+     *
+     * @param a
+     * @param b
+     * @return suma
+     */
+    public static Double adunare(double a, double b) {
+        return a + b;
+
     }
 
-    public int fibonacci(int n) {
-        if (n == 0 || n == 1) {
-            return n;
-        }
+    /**
+     * Functie care face diferenta intre doua numere de tip double,
+     *
+     * @param a
+     * @param b
+     * @return diferenta
+     */
+    public static Double scadere(double a, double b) {
+        return a - b;
+    }
 
-        return fibonacci(n - 1) + fibonacci(n - 2);
+    /**
+     * Functie care inmulteste doua numere de tip double
+     *
+     * @param a
+     * @param b
+     * @return inmultirea
+     */
+    public static Double inmultire(double a, double b) {
+        return a * b;
+    }
+
+    /**
+     * Functie care imparte doua numere de tip double
+     *
+     * @param a
+     * @param b
+     * @return impartirea
+     */
+
+    public static Double impartire(double a, double b) {
+        return a / b;
     }
 }
