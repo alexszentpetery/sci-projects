@@ -14,25 +14,36 @@ public class Main {
         //citim operatiunea care se doreste a se interpreta
         String operatie = JOptionPane.showInputDialog(null, "Ce operatiune doriti sa facem ?");
 
+        // Citim variabila 1
+        String primaVariabila = JOptionPane.showInputDialog(null, "Introduceti prima valoare?");
+        Double x = Double.parseDouble(primaVariabila);
+
+        // Citim variabila 1
+        String aDouaVariabila = JOptionPane.showInputDialog(null, "Introduceti prima valoare?");
+        Double y = Double.parseDouble(aDouaVariabila);
+
+
         Calculator calculator = new Calculator();
+
+        // folosim swith pentru a chema doar methoda solicitata
         switch (operatie) {
 
         case "adunare":
-            System.out.println("suma:" + calculator.adunare(Double.parseDouble(args[0]), Double.parseDouble(args[1])));
+            System.out.println("suma:" + calculator.adunare(x,y));
             break;
         case "scadere":
-            System.out.println("scadere:" + calculator.scadere(Double.parseDouble(args[0]), Double.parseDouble(args[1])));
+            System.out.println("scadere:" + calculator.scadere(x,y));
             break;
         case "impartire":
         if (Double.parseDouble(args[1]) != 0) {
 
-            System.out.println("impartire:" + calculator.impartire(Double.parseDouble(args[0]), Double.parseDouble(args[1])));
+            System.out.println("impartire:" + calculator.impartire(x,y));
         } else
 
             System.out.println("ERROR ---- Impartirea la 0 nu este permisa ----");
             break;
         case "inmultire":
-            System.out.println("inmultire:" + calculator.inmultire(Double.parseDouble(args[0]), Double.parseDouble(args[1])));
+            System.out.println("inmultire:" + calculator.inmultire(x,y));
             break;
         default:
             JOptionPane.showMessageDialog(null,"Operatiune incorecta");
