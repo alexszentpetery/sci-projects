@@ -22,6 +22,11 @@ public class Main {
         String aDouaVariabila = JOptionPane.showInputDialog(null, "Introduceti prima valoare?");
         Double y = Double.parseDouble(aDouaVariabila);
 
+        /*
+        trebuie sa rezolv situatia in care inputul nu sunt valori numerice pentru variabile si se introduc stringuri
+         */
+
+
 
         Calculator calculator = new Calculator();
 
