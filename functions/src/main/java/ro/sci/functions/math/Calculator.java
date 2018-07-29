@@ -11,7 +11,7 @@ public class Calculator {
      * @param b
      * @return suma
      */
-    public static Double adunare(double a, double b) {
+    public  Double adunare(double a, double b) {
         return a + b;
 
     }
@@ -23,7 +23,7 @@ public class Calculator {
      * @param b
      * @return diferenta
      */
-    public static Double scadere(double a, double b) {
+    public  Double scadere(double a, double b) {
         return a - b;
     }
 
@@ -34,7 +34,7 @@ public class Calculator {
      * @param b
      * @return inmultirea
      */
-    public static Double inmultire(double a, double b) {
+    public  Double inmultire(double a, double b) {
         return a * b;
     }
 
@@ -46,7 +46,7 @@ public class Calculator {
      * @return impartirea
      */
 
-    public static Double impartire(double a, double b) {
+    public  Double impartire(double a, double b) {
 
 
         if (b != 0) {

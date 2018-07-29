@@ -51,13 +51,16 @@ public class Main {
         switch (operatie) {
 
             case "adunare":
-                System.out.println("suma:" + calculator.adunare(x, y));
+                System.out.println("suma: " + calculator.adunare(x, y));
                 break;
             case "scadere":
-                System.out.println("scadere:" + calculator.scadere(x, y));
+                System.out.println("scadere: " + calculator.scadere(x, y));
                 break;
             case "impartire":
-                System.out.println("impartire:" + calculator.impartire(x, y));
+                System.out.println("impartire: " + calculator.impartire(x, y));
+                break;
+            case "inmultire":
+                System.out.println("impartire: " + calculator.inmultire(x, y));
                 break;
 
             default:
