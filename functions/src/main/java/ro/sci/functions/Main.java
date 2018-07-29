@@ -14,13 +14,34 @@ public class Main {
         //citim operatiunea care se doreste a se interpreta
         String operatie = JOptionPane.showInputDialog(null, "Ce operatiune doriti sa facem ?");
 
-        // Citim variabila 1
-        String primaVariabila = JOptionPane.showInputDialog(null, "Introduceti prima valoare?");
-        Double x = Double.parseDouble(primaVariabila);
 
-        // Citim variabila 1
-        String aDouaVariabila = JOptionPane.showInputDialog(null, "Introduceti prima valoare?");
+            // Citim variabila 1
+            String primaVariabila = JOptionPane.showInputDialog(null, "Introduceti prima valoare?");
+
+            try {
+                Double m = Double.parseDouble(primaVariabila);
+            }
+            catch(Exception e){
+                JOptionPane.showMessageDialog(null ,"Valoarea introdusa nu e corecta");
+                primaVariabila = JOptionPane.showInputDialog(null, "Introduceti prima valoare?");
+            }
+            Double x = Double.parseDouble(primaVariabila);
+
+
+        // Citim variabila 2
+            String aDouaVariabila = JOptionPane.showInputDialog(null, "Introduceti a doua valoare?");
+
+            try {
+                Double m = Double.parseDouble(aDouaVariabila);
+            }
+            catch(Exception e) {
+                JOptionPane.showMessageDialog(null ,"Valoarea introdusa nu e corecta");
+                primaVariabila = JOptionPane.showInputDialog(null, "Introduceti a doua valoare?");
+            }
         Double y = Double.parseDouble(aDouaVariabila);
+
+
+
 
         /*
         trebuie sa rezolv situatia in care inputul nu sunt valori numerice pentru variabile si se introduc stringuri
