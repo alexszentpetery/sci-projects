@@ -40,10 +40,14 @@ public class CalculZile {
                 break;
             case "februarie":
                 String an = JOptionPane.showInputDialog(null, "introduceti anul;");
-                int anSelectat = Integer.parseInt(an);
+                Double anSelectat = Double.parseDouble(an);
 
-                if ((anSelectat % 4 == 0) || (anSelectat % 100 != 0) || (anSelectat % 400 == 0) ) {
-                numar = 29;
+                // se imparte la 4 - an bisect
+                //  se imparte la 100 - nu e an bisect
+                // se imparte la 400 -an bisect
+
+                if (anSelectat % 4 == 0 && (anSelectat %100 !=0 || anSelectat % 400==0)   ){
+                    numar = 29;
             } else
                  numar = 28;
             break;
