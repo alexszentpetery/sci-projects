@@ -12,13 +12,16 @@ public class CalculZile {
 
     /**
      * functie care preia o luna si calculeaza numaruld e zile din luna respectiva
+     *
      * @param luna
      * @return numar
      */
 
 
     public int numarZile(String luna) {
-      // rezolvat problema de case sensitive
+
+       luna = luna.toLowerCase();
+
         switch (luna) {
             case "ianuarie":
             case "martie":
@@ -36,11 +39,14 @@ public class CalculZile {
                 numar = 30;
                 break;
             case "februarie":
-                String an = JOptionPane.showInputDialog(null,"introduceti anul;");
+                String an = JOptionPane.showInputDialog(null, "introduceti anul;");
                 int anSelectat = Integer.parseInt(an);
+
+                if ((anSelectat % 4 == 0) || (anSelectat % 100 != 0) || (anSelectat % 400 == 0) ) {
                 numar = 29;
-                //conditii , an bisect si restu
-                break;
+            } else
+                 numar = 28;
+            break;
             default:
                 System.out.println("luna introdusa nu exista");
                 break;

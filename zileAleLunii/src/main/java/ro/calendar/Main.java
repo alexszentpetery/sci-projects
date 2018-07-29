@@ -12,9 +12,7 @@ public class Main {
 
         String luna = JOptionPane.showInputDialog(null,"introduceti luna pentru care se doreste calculul de zile");
 
-        System.out.println("luna :" + luna);
-
-        System.out.println("numar de zile in luna selectata este: " + calculZile.numarZile(luna));
+        System.out.println("numar de zile in luna "+ luna+ "  este: " + calculZile.numarZile(luna));
 
     }
 
