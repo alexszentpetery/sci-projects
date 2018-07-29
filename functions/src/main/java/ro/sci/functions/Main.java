@@ -15,38 +15,29 @@ public class Main {
         String operatie = JOptionPane.showInputDialog(null, "Ce operatiune doriti sa facem ?");
 
 
-            // Citim variabila 1
-            String primaVariabila = JOptionPane.showInputDialog(null, "Introduceti prima valoare?");
+        // Citim variabila 1
+        String primaVariabila = JOptionPane.showInputDialog(null, "Introduceti prima valoare?");
 
-            try {
-                Double m = Double.parseDouble(primaVariabila);
-            }
-            catch(Exception e){
-                JOptionPane.showMessageDialog(null ,"Valoarea introdusa nu e corecta");
-                primaVariabila = JOptionPane.showInputDialog(null, "Introduceti prima valoare?");
-            }
-            Double x = Double.parseDouble(primaVariabila);
-
+        try {
+            Double m = Double.parseDouble(primaVariabila);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Valoarea introdusa nu e corecta");
+            primaVariabila = JOptionPane.showInputDialog(null, "Introduceti prima valoare?");
+        }
+        Double x = Double.parseDouble(primaVariabila);
+// ramane problema ca si daca in catch introduce tot eronat aduci avem eroare , trebuie o bucla
 
         // Citim variabila 2
-            String aDouaVariabila = JOptionPane.showInputDialog(null, "Introduceti a doua valoare?");
+        String aDouaVariabila = JOptionPane.showInputDialog(null, "Introduceti a doua valoare?");
 
-            try {
-                Double m = Double.parseDouble(aDouaVariabila);
-            }
-            catch(Exception e) {
-                JOptionPane.showMessageDialog(null ,"Valoarea introdusa nu e corecta");
-                primaVariabila = JOptionPane.showInputDialog(null, "Introduceti a doua valoare?");
-            }
+        try {
+            Double m = Double.parseDouble(aDouaVariabila);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Valoarea introdusa nu e corecta");
+            aDouaVariabila = JOptionPane.showInputDialog(null, "Introduceti a doua valoare?");
+        }
         Double y = Double.parseDouble(aDouaVariabila);
-
-
-
-
-        /*
-        trebuie sa rezolv situatia in care inputul nu sunt valori numerice pentru variabile si se introduc stringuri
-         */
-
+// ramane problema ca si daca in catch introduce tot eronat aduci avem eroare , trebuie o bucla
 
         Calculator calculator = new Calculator();
 
