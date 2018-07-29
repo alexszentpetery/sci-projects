@@ -1,5 +1,7 @@
 package ro.calendar.calculZile;
 
+import javax.swing.*;
+
 /**
  * Clasa care calculeaza numarul de zile dintr-o luna
  */
@@ -34,9 +36,11 @@ public class CalculZile {
                 numar = 30;
                 break;
             case "februarie":
+                String an = JOptionPane.showInputDialog(null,"introduceti anul;");
+                int anSelectat = Integer.parseInt(an);
                 numar = 29;
                 //conditii , an bisect si restu
-
+                break;
             default:
                 System.out.println("luna introdusa nu exista");
                 break;
