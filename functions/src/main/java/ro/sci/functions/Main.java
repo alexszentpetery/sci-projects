@@ -27,32 +27,24 @@ public class Main {
          */
 
 
-
         Calculator calculator = new Calculator();
 
         // folosim swith pentru a chema doar methoda solicitata
         switch (operatie) {
 
-        case "adunare":
-            System.out.println("suma:" + calculator.adunare(x,y));
-            break;
-        case "scadere":
-            System.out.println("scadere:" + calculator.scadere(x,y));
-            break;
-        case "impartire":
-        if (Double.parseDouble(args[1]) != 0) {
+            case "adunare":
+                System.out.println("suma:" + calculator.adunare(x, y));
+                break;
+            case "scadere":
+                System.out.println("scadere:" + calculator.scadere(x, y));
+                break;
+            case "impartire":
+                System.out.println("impartire:" + calculator.impartire(x, y));
+                break;
 
-            System.out.println("impartire:" + calculator.impartire(x,y));
-        } else
-
-            System.out.println("ERROR ---- Impartirea la 0 nu este permisa ----");
-            break;
-        case "inmultire":
-            System.out.println("inmultire:" + calculator.inmultire(x,y));
-            break;
-        default:
-            JOptionPane.showMessageDialog(null,"Operatiune incorecta");
-            break;
+            default:
+                JOptionPane.showMessageDialog(null, "Operatiune incorecta");
+                break;
+        }
     }
-}
 }

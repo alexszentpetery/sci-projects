@@ -47,6 +47,13 @@ public class Calculator {
      */
 
     public static Double impartire(double a, double b) {
-        return a / b;
+
+
+        if (b != 0) {
+            return a / b;
+        } else
+            System.out.println("ERROR ---- Impartirea la 0 nu este permisa ----");
+        return null;
+        //people recomand to throw an exception
     }
 }
