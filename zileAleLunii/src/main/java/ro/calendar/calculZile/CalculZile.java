@@ -21,6 +21,8 @@ public class CalculZile {
     public int numarZile(String luna) {
 
        luna = luna.toLowerCase();
+       String operatie;
+       operatie=luna;
 
         switch (luna) {
             case "ianuarie":
@@ -52,10 +54,23 @@ public class CalculZile {
                  numar = 28;
             break;
             default:
-                System.out.println("luna introdusa nu exista");
+                JOptionPane.showMessageDialog(null,"luna introdusa nu exista");
+
+                Object[] possibilities = {"ianuarie", "februarie", "martie", "aprilie" , "mai" , "iunie" , "iulie","august","septembrie","octombrie","noiembrie","decembrie"};
+                operatie = (String) JOptionPane.showInputDialog(
+                        null,
+                        "Selectati o luna?",
+                        "Selector Operatiune",
+                        JOptionPane.PLAIN_MESSAGE,
+                        null,
+                        possibilities,
+                        "ianuarie");
+                numarZile(operatie);
                 break;
 
         }
+        luna = operatie;
+
         return numar;
     }
 
