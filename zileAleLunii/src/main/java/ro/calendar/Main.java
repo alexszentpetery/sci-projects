@@ -10,10 +10,11 @@ public class Main {
 
         CalculZile calculZile = new CalculZile();
 
-        String luna = JOptionPane.showInputDialog(null,"introduceti luna pentru care se doreste calculul de zile");
+        String luna = JOptionPane.showInputDialog(null, "introduceti luna pentru care se doreste calculul de zile");
 
-        System.out.println("numar de zile in luna "+ luna+ "  este: " + calculZile.numarZile(luna));
-
+        // System.out.println("numar de zile in luna " + luna + "  este: " + numar);
+        //introdus metoda de printare in vazul in care se citeste o luna inexistenta
+        calculZile.printeazaCalculZile(luna);
     }
 
 
