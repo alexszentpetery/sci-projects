@@ -43,6 +43,7 @@ public class CalculZile {
                 break;
 
             case "februarie":
+                // ---------------- PERICOL DE JAVA NULL POINTER exception
                 String an = JOptionPane.showInputDialog(null, "introduceti anul;");
                 Double anSelectat = Double.parseDouble(an);
 
@@ -60,6 +61,7 @@ public class CalculZile {
 
                 JOptionPane.showMessageDialog(null, "luna introdusa nu exista", "Error", JOptionPane.ERROR_MESSAGE);
 
+                // ---------------- PERICOL DE JAVA NULL POINTER exception
                 Object[] possibilities = {"ianuarie", "februarie", "martie", "aprilie", "mai", "iunie", "iulie", "august", "septembrie", "octombrie", "noiembrie", "decembrie"};
                 operatie = (String) JOptionPane.showInputDialog(
                         null,
@@ -88,12 +90,7 @@ public class CalculZile {
         if (numar == 0) {
             numarZile(luna);
         }
-
-
-        if (luna == "februarie") {
-            System.out.println("numar de zile in luna " + luna + "  este: " + numar);
-        } else
-            System.out.println("numar de zile in luna " + operatie + "  este: " + numar);
+        System.out.println("numar de zile in luna " + operatie + "  este: " + numar);
         numar = 0;
     }
 
