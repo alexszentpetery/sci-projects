@@ -83,15 +83,16 @@ public class CalculZile {
     /**
      * metoda pentru afisarea numarului de zile din luna selectata
      * se corecteaza daca luna citita initial era incorecta
+     * se ruleaza methoda numarZile
      *
      * @param luna
      */
     public void printeazaCalculZile(String luna) {
-        if (numar == 0) {
-            numarZile(luna);
-        }
+
+       numarZile(luna);
+
         System.out.println("numar de zile in luna " + operatie + "  este: " + numar);
-        numar = 0;
+
     }
 
 }
