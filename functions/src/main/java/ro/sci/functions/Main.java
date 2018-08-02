@@ -10,8 +10,12 @@ public class Main {
 
         //citim operatiunea care se doreste a se interpreta
 
+        String operatie =null;
+        while (operatie==null){
+
+
         Object[] possibilities = {"adunare", "scadere", "inmultire", "impartire"};
-        String operatie = (String) JOptionPane.showInputDialog(
+        operatie = (String) JOptionPane.showInputDialog(
                 null,
                 "Ce operatiune doriti sa facem ?",
                 "Selector Operatiune",
@@ -19,6 +23,7 @@ public class Main {
                 null,
                 possibilities,
                 "adunare");
+        }
 
 
         // Citim variabila 1
