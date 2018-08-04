@@ -2,7 +2,7 @@ package sci.java.person;
 
 public class PersonSorter {
 
-    public void personSorter(Person[] sortarePersoane) {
+    public void personSorter(Person[] listaPersoane) {
         int tempAge;
         int tempAge2;
         boolean flag;
@@ -11,24 +11,23 @@ public class PersonSorter {
         while (flag) {
             flag = false;
 
-            for (int i = 0; i < sortarePersoane.length - 1; i++) {
-                Person forSwapPerson = sortarePersoane[i];
-                tempAge = sortarePersoane[i].getAge();
-                tempAge2 = sortarePersoane[i + 1].getAge();
+            for (int i = 0; i < listaPersoane.length - 1; i++) {
+                Person forSwapPerson = listaPersoane[i];
+                tempAge = listaPersoane[i].getAge();
+                tempAge2 = listaPersoane[i + 1].getAge();
                 if (tempAge > tempAge2) {
-                    sortarePersoane[i] = sortarePersoane[i + 1];
-                    sortarePersoane[i + 1] = forSwapPerson;
+                    listaPersoane[i] = listaPersoane[i + 1];
+                    listaPersoane[i + 1] = forSwapPerson;
                     flag = true;
                 }
             }
         }
-        for (int i = 0; i < sortarePersoane.length; i++) {
+        for (int i = 0; i < listaPersoane.length; i++) {
 
-         /* daca nu am citit numele de familie si cel de botez atunci nu facem display
-                System.out.printf("" + sortarePersoane[i].getFirstName());
-                System.out.printf("" + sortarePersoane[i].getLastName());
-         */
-            System.out.println("" + sortarePersoane[i].getAge());
+
+            System.out.printf("" + listaPersoane[i].getFirstName());
+            System.out.printf("" + listaPersoane[i].getLastName());
+            System.out.println("" + listaPersoane[i].getAge());
         }
 
     }
