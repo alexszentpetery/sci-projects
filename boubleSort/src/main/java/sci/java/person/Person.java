@@ -16,28 +16,29 @@ public class Person {
 
     }
 
+    public String getFirstName() {
+        return firstName;
+    }
+
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getLastName() {
+        return lastName;
     }
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setAge(int age){
-        this.age = age;
-    }
 
     public int getAge() {
-        return age ;
+        return age;
 
+    }
+
+    public void setAge(int age) {
+        this.age = age;
     }
 
 
