@@ -1,7 +1,5 @@
 package sci.java.person;
 
-import javax.swing.JOptionPane;
-
 /**
  * Clasa pentru a citi persoane .
  */
@@ -34,7 +32,6 @@ public class Person {
 
     public int getAge() {
         return age;
-
     }
 
     public void setAge(int age) {
