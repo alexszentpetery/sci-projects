@@ -34,14 +34,8 @@ public class Main {
 
         String operatie;
         Object[] possibilities = {"boubleSort", "insertSort"};
-        operatie = (String) JOptionPane.showInputDialog(
-                null,
-                "Selectati metoda de sortare",
-                "Selector",
-                JOptionPane.WARNING_MESSAGE,
-                null,
-                possibilities,
-                "boubleSort");
+        operatie = (String) JOptionPane.showInputDialog(null, "Selectati metoda de sortare", "Selector", JOptionPane.WARNING_MESSAGE, null,
+                possibilities, "boubleSort");
 
         //sortam in functie de alegere
 
