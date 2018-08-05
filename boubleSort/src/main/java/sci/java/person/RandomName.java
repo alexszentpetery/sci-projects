@@ -2,6 +2,11 @@ package sci.java.person;
 
 import java.util.Random;
 
+/**
+ * Clasa pentru a genera un sir de charactere de o anumita lungime (predefinita sau random) dintr-un sir care contine litere alfabetului
+ * returneaza o variabila de tip string
+ */
+
 public class RandomName {
 
     public String randomName() {
@@ -18,15 +23,18 @@ public class RandomName {
         int numarCaractere;
         Random rand = new Random();
 
+        //lungime random sau predefinita
         numarCaractere = 4;
         numarCaractere = rand.nextInt(7);
 
-        //nu folosesc random la numarul de caractere ca sa putem citi mai bine valorile sortate
 
 
+        //se genereaza sigur de charactere
         char[] text = new char[numarCaractere];
 
         for (int i = 0; i < numarCaractere; i++) {
+
+            //primul caractere se citeste din sirul uppercase
             if (i == 0) {
                 text[i] = caractere2.charAt(rand.nextInt(caractere2.length()));
             } else {

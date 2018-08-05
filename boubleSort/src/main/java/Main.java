@@ -14,13 +14,14 @@ public class Main {
 
         RandomName nume = new RandomName();
 
+        //citim numarul de persoane pentru sortat
         while (nrPersons == null) {
             nrPersons = JOptionPane.showInputDialog(null, "Cate Persoane doriti sa introduceti");
         }
 
         Person[] persoane = new Person[Integer.parseInt(nrPersons)];
 
-
+        //generam automat firsn name si last name si citim age
         for (int i = 0; i < Integer.parseInt(nrPersons); i++) {
             persoane[i] = new Person();
             persoane[i].setFirstName(nume.randomName());
@@ -28,10 +29,11 @@ public class Main {
             persoane[i].setAge(Integer.parseInt(JOptionPane.showInputDialog(null, "introduceti varsta  persoanei " + persoane[i].getFirstName() + persoane[i].lastName)));
 
         }
-        PersonSorter sortare = new PersonSorter();
+
+        //selectam metoda de sortare
 
         String operatie;
-        Object[] possibilities = {"boubleSort","insertSort"};
+        Object[] possibilities = {"boubleSort", "insertSort"};
         operatie = (String) JOptionPane.showInputDialog(
                 null,
                 "Selectati metoda de sortare",
@@ -41,11 +43,12 @@ public class Main {
                 possibilities,
                 "boubleSort");
 
+        //sortam in functie de alegere
 
-        if (operatie=="boubleSort" ){
+        PersonSorter sortare = new PersonSorter();
+        if (operatie == "boubleSort") {
             sortare.boubleSort(persoane);
-        }
-        else {
+        } else {
             sortare.insertSort(persoane);
         }
     }

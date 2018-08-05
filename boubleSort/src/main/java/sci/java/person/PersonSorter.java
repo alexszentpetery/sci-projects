@@ -1,6 +1,14 @@
 package sci.java.person;
 
+/**
+ * clasa pentru a sorta o lista
+ */
+
+
 public class PersonSorter {
+
+
+    //metoda bouble sort
 
     public void boubleSort(Person[] listaPersoane) {
         int tempAge;
@@ -8,6 +16,8 @@ public class PersonSorter {
         boolean flag;
         flag = true;
         System.out.println("Bouble Sort");
+
+
         while (flag) {
             flag = false;
 
@@ -31,6 +41,8 @@ public class PersonSorter {
         }
 
     }
+
+    //metoda de sortare prin insertie
 
     public void insertSort(Person[] listaPersoane) {
         int tempAge;
