@@ -10,19 +10,12 @@ public class Main {
 
         //citim operatiunea care se doreste a se interpreta
 
-        String operatie =null;
-        while (operatie==null){
+        String operatie = null;
 
-
-        Object[] possibilities = {"adunare", "scadere", "inmultire", "impartire"};
-        operatie = (String) JOptionPane.showInputDialog(
-                null,
-                "Ce operatiune doriti sa facem ?",
-                "Selector Operatiune",
-                JOptionPane.PLAIN_MESSAGE,
-                null,
-                possibilities,
-                "adunare");
+        while (operatie == null) {
+            Object[] possibilities = {"aduna", "scade", "inmulteste", "imparte"};
+            operatie = (String) JOptionPane.showInputDialog(null, "Ce operatiune doriti sa facem ?", "Selector Operatiune",
+                    JOptionPane.PLAIN_MESSAGE, null, possibilities, "aduna");
         }
 
 
@@ -58,23 +51,22 @@ public class Main {
 
         // nu se poate face abort la program !! trebuie neaparat introduse valori , esc ar trebui sa faca break...
 
-
         Calculator calculator = new Calculator();
 
         // folosim swith pentru a chema doar methoda solicitata
         switch (operatie) {
 
-            case "adunare":
-                System.out.println("suma:  " + x + " + " + y + " = " + calculator.adunare(x, y));
+            case "aduna":
+                System.out.println("suma:  " + x + " + " + y + " = " + calculator.aduna(x, y));
                 break;
-            case "scadere":
-                System.out.println("scadere:  " + x + " - " + y + " = " + calculator.scadere(x, y));
+            case "scade":
+                System.out.println("scade:  " + x + " - " + y + " = " + calculator.scade(x, y));
                 break;
-            case "impartire":
-                System.out.println("impartire:  " + x + " / " + y + " = " + calculator.impartire(x, y));
+            case "imparte":
+                System.out.println("imparte:  " + x + " / " + y + " = " + calculator.imparte(x, y));
                 break;
-            case "inmultire":
-                System.out.println("inmultire : " + x + " * " + y + " = " + calculator.inmultire(x, y));
+            case "inmulteste":
+                System.out.println("inmulteste : " + x + " * " + y + " = " + calculator.inmulteste(x, y));
                 break;
 
             default:
