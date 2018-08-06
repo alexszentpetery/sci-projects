@@ -42,10 +42,10 @@ public class Main {
         PersonSorter sortare = new PersonSorter();
         if (operatie == "boubleSort") {
             sortare.boubleSort(persoane);
-            sortare.boubleSortDisplay(persoane);
-        } else {
+            sortare.sortedList(persoane);
+        } else if (operatie=="insertSort"){
             sortare.insertSort(persoane);
-            sortare.insertSortDisplay(persoane);
+            sortare.sortedList(persoane);
         }
     }
 

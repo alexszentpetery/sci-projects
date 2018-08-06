@@ -28,17 +28,7 @@ public class PersonSorter {
         }
     }
 
-    public void boubleSortDisplay(Person[] listaPersoane) {
-        System.out.println("Bouble Sort");
-        for (int i = 0; i < listaPersoane.length; i++) {
 
-
-            System.out.printf("" + listaPersoane[i].getFirstName());
-            System.out.printf("" + listaPersoane[i].getLastName());
-            System.out.println("" + listaPersoane[i].getAge());
-
-        }
-    }
 
 
     //metoda de sortare prin insertie
@@ -62,7 +52,10 @@ public class PersonSorter {
         }
     }
 
-    public void insertSortDisplay(Person[] listaPersoane) {
+    // aadaugat metoda pentru a afisa lista sortata.
+
+
+    public void sortedList(Person[] listaPersoane) {
 
 
         for (int i = 0; i < listaPersoane.length; i++) {
