@@ -5,9 +5,9 @@ package sci.java.person;
  */
 
 public class Person {
-    public String firstName;
-    public String lastName;
-    public int age;
+    private String firstName;
+    private String lastName;
+    private int age;
 
 
     public Person() {

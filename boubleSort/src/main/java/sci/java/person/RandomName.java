@@ -25,22 +25,18 @@ public class RandomName {
 
         //lungime random sau predefinita
         numarCaractere = 4;
-        numarCaractere = rand.nextInt(7);
+        // numarCaractere = rand.nextInt(7);
 
-
-
-        //se genereaza sigur de charactere
+        //se genereaza sirul de charactere
         char[] text = new char[numarCaractere];
 
         for (int i = 0; i < numarCaractere; i++) {
-
             //primul caractere se citeste din sirul uppercase
             if (i == 0) {
                 text[i] = caractere2.charAt(rand.nextInt(caractere2.length()));
             } else {
                 text[i] = caractere.charAt(rand.nextInt(caractere.length()));
             }
-
         }
 
         for (int i = 0; i < text.length; i++) {
@@ -49,8 +45,6 @@ public class RandomName {
         randomString = randomString + " ";
         return randomString;
     }
-
-
 }
 
 

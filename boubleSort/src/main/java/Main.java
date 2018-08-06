@@ -26,12 +26,11 @@ public class Main {
             persoane[i] = new Person();
             persoane[i].setFirstName(nume.randomName());
             persoane[i].setLastName(nume.randomName());
-            persoane[i].setAge(Integer.parseInt(JOptionPane.showInputDialog(null, "introduceti varsta  persoanei " + persoane[i].getFirstName() + persoane[i].lastName)));
+            persoane[i].setAge(Integer.parseInt(JOptionPane.showInputDialog(null, "introduceti varsta  persoanei " + persoane[i].getFirstName() + persoane[i].getLastName())));
 
         }
 
         //selectam metoda de sortare
-
         String operatie;
         Object[] possibilities = {"boubleSort", "insertSort"};
         operatie = (String) JOptionPane.showInputDialog(null, "Selectati metoda de sortare", "Selector", JOptionPane.WARNING_MESSAGE, null,
@@ -42,10 +41,10 @@ public class Main {
         PersonSorter sortare = new PersonSorter();
         if (operatie == "boubleSort") {
             sortare.boubleSort(persoane);
-            sortare.sortedList(persoane);
-        } else if (operatie=="insertSort"){
+            sortare.sortList(persoane);
+        } else if (operatie == "insertSort") {
             sortare.insertSort(persoane);
-            sortare.sortedList(persoane);
+            sortare.sortList(persoane);
         }
     }
 
