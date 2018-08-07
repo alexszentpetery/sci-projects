@@ -1,7 +1,4 @@
-import sci.java.person.Person;
-import sci.java.person.PersonSorter;
-import sci.java.person.RandomName;
-import sci.java.person.SortingMethods;
+import sci.java.person.*;
 
 import javax.swing.*;
 
@@ -10,8 +7,7 @@ public class Main {
 
 
     public static void main(String[] args) {
-        String nrPersons;
-        nrPersons = null;
+        String nrPersons = null;
 
         RandomName nume = new RandomName();
 
@@ -20,7 +16,7 @@ public class Main {
             nrPersons = JOptionPane.showInputDialog(null, "Cate Persoane doriti sa introduceti");
         }
 
-        Person[] persoane = new Person[Integer.parseInt(nrPersons)];
+        Person [] persoane = new Person[Integer.parseInt(nrPersons)];
 
         //generam automat firsn name si last name si citim age
         for (int i = 0; i < Integer.parseInt(nrPersons); i++) {

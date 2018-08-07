@@ -4,7 +4,7 @@ package sci.java.person;
  * Clasa pentru a citi persoane .
  */
 
-public class Person {
+public class Person implements SorterByAge {
     private String firstName;
     private String lastName;
     private int age;

@@ -2,6 +2,6 @@ package sci.java.person;
 
 public interface SortingMethods {
 
-    void boubleSort(Person[] list);
-    void insertSort(Person[] list);
+    void boubleSort(SorterByAge[] list);
+    void insertSort(SorterByAge[] list);
 }
