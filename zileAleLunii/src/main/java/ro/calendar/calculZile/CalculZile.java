@@ -8,8 +8,8 @@ import javax.swing.JOptionPane;
 
 
 public class CalculZile {
-    int numar;
     public String operatie;
+    int numar;
 
     /**
      * functie care preia o luna si calculeaza numaruld e zile din luna respectiva
@@ -19,7 +19,7 @@ public class CalculZile {
      */
 
 
-    public int numarZile(String luna) {
+    public int CalculeazaNumarZile(String luna) {
 
         luna = luna.toLowerCase();
 
@@ -27,21 +27,38 @@ public class CalculZile {
 
         switch (luna) {
             case "ianuarie":
+                numar = 31;
+                break;
             case "martie":
+                numar = 31;
+                break;
             case "mai":
+                numar = 31;
+                break;
             case "iulie":
+                numar = 31;
+                break;
             case "august":
+                numar = 31;
+                break;
             case "octombrie":
+                numar = 31;
+                break;
             case "decembrie":
                 numar = 31;
                 break;
             case "aprilie":
+                numar = 30;
+                break;
             case "iunie":
+                numar = 30;
+                break;
             case "septembrie":
+                numar = 30;
+                break;
             case "noiembrie":
                 numar = 30;
                 break;
-
             case "februarie":
                 // ---------------- PERICOL DE JAVA NULL POINTER exception
                 String an = JOptionPane.showInputDialog(null, "introduceti anul;");
@@ -63,36 +80,11 @@ public class CalculZile {
 
                 // ---------------- PERICOL DE JAVA NULL POINTER exception
                 Object[] possibilities = {"ianuarie", "februarie", "martie", "aprilie", "mai", "iunie", "iulie", "august", "septembrie", "octombrie", "noiembrie", "decembrie"};
-                operatie = (String) JOptionPane.showInputDialog(
-                        null,
-                        "Selectati o luna?",
-                        "Selector Operatiune",
-                        JOptionPane.WARNING_MESSAGE,
-                        null,
-                        possibilities,
-                        "ianuarie");
-                numarZile(operatie);
+                operatie = (String) JOptionPane.showInputDialog(null, "Selectati o luna?", "Selector Operatiune",
+                        JOptionPane.WARNING_MESSAGE, null, possibilities, "ianuarie");
+                CalculeazaNumarZile(operatie);
                 break;
-
         }
-
-
         return numar;
     }
-
-    /**
-     * metoda pentru afisarea numarului de zile din luna selectata
-     * se corecteaza daca luna citita initial era incorecta
-     * se ruleaza methoda numarZile
-     *
-     * @param luna
-     */
-    public void printeazaCalculZile(String luna) {
-
-       numarZile(luna);
-
-        System.out.println("numar de zile in luna " + operatie + "  este: " + numar);
-
-    }
-
 }
