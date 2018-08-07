@@ -39,11 +39,10 @@ public class Sorter implements SortingMethods {
     }
     // doar pentru a vedea cum functioneaza interfata am introdus 2 metode nule
 
-    public void insereazaPrinAduagare() {
+    public void insereazaPrinAduagare(){
 
     }
-
-    public void fastSort() {
+    public void fastSort(){
 
     }
 

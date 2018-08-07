@@ -21,10 +21,12 @@ public class Main {
             persoane[i] = new Person();
             persoane[i].setFirstName(nume.randomName());
             persoane[i].setLastName(nume.randomName());
-            persoane[i].setAge(Integer.parseInt(JOptionPane.showInputDialog(null, "introduceti varsta  persoanei 1" + persoane[i].getFirstName() + persoane[i].getLastName())));
-
+            persoane[i].setAge(Integer.parseInt(JOptionPane.showInputDialog(null, "introduceti varsta  persoanei " + persoane[i].getFirstName() + persoane[i].getLastName())));
         }
-    //selectam metoda de sortare
+
+
+
+        //selectam metoda de sortare
         String operatie;
         Object[] possibilities = {"boubleSort", "insertSort"};
         operatie = (String) JOptionPane.showInputDialog(null, "Selectati metoda de sortare", "Selector", JOptionPane.WARNING_MESSAGE, null,
