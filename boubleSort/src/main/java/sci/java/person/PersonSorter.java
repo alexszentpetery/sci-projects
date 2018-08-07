@@ -24,7 +24,7 @@ public class PersonSorter {
         }
     }
 
-}
+
 
     //metoda de sortare prin insertie
     public void insertSort(Person[] listaPersoane) {
