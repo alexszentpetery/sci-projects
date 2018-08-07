@@ -7,7 +7,7 @@ import javax.swing.JOptionPane;
  */
 
 
-public class CalculZile {
+public class CalculatorZile {
     public String operatie;
     int numar;
 
@@ -75,13 +75,12 @@ public class CalculZile {
                 break;
             default:
                 // ---------------- PERICOL DE JAVA NULL POINTER exception
-
                 JOptionPane.showMessageDialog(null, "luna introdusa nu exista", "Error", JOptionPane.ERROR_MESSAGE);
-
-                // ---------------- PERICOL DE JAVA NULL POINTER exception
                 Object[] possibilities = {"ianuarie", "februarie", "martie", "aprilie", "mai", "iunie", "iulie", "august", "septembrie", "octombrie", "noiembrie", "decembrie"};
+
                 operatie = (String) JOptionPane.showInputDialog(null, "Selectati o luna?", "Selector Operatiune",
                         JOptionPane.WARNING_MESSAGE, null, possibilities, "ianuarie");
+
                 CalculeazaNumarZile(operatie);
                 break;
         }
