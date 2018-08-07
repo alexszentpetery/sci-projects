@@ -1,4 +1,4 @@
-package sci.java.person;
+package sci.java;
 
 /**
  * Clasa pentru a citi persoane .
@@ -11,7 +11,6 @@ public class Person implements SorterByAge {
 
 
     public Person() {
-
     }
 
     public String getFirstName() {

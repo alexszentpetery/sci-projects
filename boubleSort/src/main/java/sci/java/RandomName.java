@@ -1,4 +1,4 @@
-package sci.java.person;
+package sci.java;
 
 import java.util.Random;
 

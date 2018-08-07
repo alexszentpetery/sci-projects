@@ -1,23 +1,23 @@
-package sci.java.person;
+package sci.java;
 
 /**
  * clasa pentru a sorta o lista
  */
 
 
-public class PersonSorter implements SortingMethods {
+public class Sorter implements SortingMethods {
 
     //metoda bouble sort
-    public void boubleSort(SorterByAge[] listaPersoane) {
+    public void boubleSort(SorterByAge[] lista) {
         boolean flag = true;
 
         while (flag) {
             flag = false;
-            for (int i = 0; i < listaPersoane.length - 1; i++) {
-                SorterByAge forSwapPerson = listaPersoane[i];
-                if (listaPersoane[i].getAge() > listaPersoane[i + 1].getAge()) {
-                    listaPersoane[i] = listaPersoane[i + 1];
-                    listaPersoane[i + 1] = forSwapPerson;
+            for (int i = 0; i < lista.length - 1; i++) {
+                SorterByAge forSwapPerson = lista[i];
+                if (lista[i].getAge() > lista[i + 1].getAge()) {
+                    lista[i] = lista[i + 1];
+                    lista[i + 1] = forSwapPerson;
                     flag = true;
                 }
             }
@@ -37,4 +37,14 @@ public class PersonSorter implements SortingMethods {
             }
         }
     }
+    // doar pentru a vedea cum functioneaza interfata am introdus 2 metode nule
+
+    public void insereazaPrinAduagare(){
+
+    }
+    public void fastSort(){
+
+    }
+
+
 }

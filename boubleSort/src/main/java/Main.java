@@ -1,4 +1,5 @@
-import sci.java.person.*;
+import sci.java.*;
+
 
 import javax.swing.*;
 
@@ -7,25 +8,23 @@ public class Main {
 
 
     public static void main(String[] args) {
-        String nrPersons = null;
+        String nrCreaturi = null;
 
         RandomName nume = new RandomName();
 
-        //citim numarul de persoane pentru sortat
-        while (nrPersons == null) {
-            nrPersons = JOptionPane.showInputDialog(null, "Cate Persoane doriti sa introduceti");
+
+        while (nrCreaturi == null) {
+            nrCreaturi = JOptionPane.showInputDialog(null, "Cate Persoane doriti sa introduceti");
         }
-
-        Person [] persoane = new Person[Integer.parseInt(nrPersons)];
-
-        //generam automat firsn name si last name si citim age
-        for (int i = 0; i < Integer.parseInt(nrPersons); i++) {
+        Person[] persoane = new Person[Integer.parseInt(nrCreaturi)];
+        for (int i = 0; i < Integer.parseInt(nrCreaturi); i++) {
             persoane[i] = new Person();
             persoane[i].setFirstName(nume.randomName());
             persoane[i].setLastName(nume.randomName());
             persoane[i].setAge(Integer.parseInt(JOptionPane.showInputDialog(null, "introduceti varsta  persoanei " + persoane[i].getFirstName() + persoane[i].getLastName())));
 
         }
+
 
         //selectam metoda de sortare
         String operatie;
@@ -35,7 +34,9 @@ public class Main {
 
         //sortam in functie de alegere
 
-        SortingMethods sortare = new PersonSorter();
+
+
+       SortingMethods sortare = new Sorter();
         if (operatie == "boubleSort") {
             sortare.boubleSort(persoane);
             sortList(persoane);
@@ -44,6 +45,7 @@ public class Main {
             sortList(persoane);
         }
     }
+
     static  void sortList(Person[] listaPersoane) {
 
 

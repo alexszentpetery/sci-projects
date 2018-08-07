@@ -1,4 +1,4 @@
-package sci.java.person;
+package sci.java;
 
 public interface SorterByAge {
 
