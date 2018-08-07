@@ -5,7 +5,7 @@ package sci.java.person;
  */
 
 
-public class PersonSorter {
+public class PersonSorter implements SortingMethods {
 
     //metoda bouble sort
     public void boubleSort(Person[] listaPersoane) {
