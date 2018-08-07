@@ -27,21 +27,38 @@ public class CalculZile {
 
         switch (luna) {
             case "ianuarie":
+                numar = 31;
+                break;
             case "martie":
+                numar = 31;
+                break;
             case "mai":
+                numar = 31;
+                break;
             case "iulie":
+                numar = 31;
+                break;
             case "august":
+                numar = 31;
+                break;
             case "octombrie":
+                numar = 31;
+                break;
             case "decembrie":
                 numar = 31;
                 break;
             case "aprilie":
+                numar = 30;
+                break;
             case "iunie":
+                numar = 30;
+                break;
             case "septembrie":
+                numar = 30;
+                break;
             case "noiembrie":
                 numar = 30;
                 break;
-
             case "februarie":
                 // ---------------- PERICOL DE JAVA NULL POINTER exception
                 String an = JOptionPane.showInputDialog(null, "introduceti anul;");
@@ -69,18 +86,8 @@ public class CalculZile {
                 break;
 
         }
-
-
         return numar;
     }
-
-    /**
-     * metoda pentru afisarea numarului de zile din luna selectata
-     * se corecteaza daca luna citita initial era incorecta
-     * se ruleaza methoda CalculeazaNumarZile
-     *
-     * @param luna
-     */
 
 
 }
