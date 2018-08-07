@@ -1,6 +1,7 @@
 import sci.java.person.Person;
 import sci.java.person.PersonSorter;
 import sci.java.person.RandomName;
+import sci.java.person.SortingMethods;
 
 import javax.swing.*;
 
@@ -38,15 +39,24 @@ public class Main {
 
         //sortam in functie de alegere
 
-        PersonSorter sortare = new PersonSorter();
+        SortingMethods sortare = new PersonSorter();
         if (operatie == "boubleSort") {
             sortare.boubleSort(persoane);
-            sortare.sortList(persoane);
+            sortList(persoane);
         } else if (operatie == "insertSort") {
             sortare.insertSort(persoane);
-            sortare.sortList(persoane);
+            sortList(persoane);
         }
     }
+    static  void sortList(Person[] listaPersoane) {
 
+
+        for (int i = 0; i < listaPersoane.length; i++) {
+
+            System.out.printf("" + listaPersoane[i].getFirstName());
+            System.out.printf("" + listaPersoane[i].getLastName());
+            System.out.println("" + listaPersoane[i].getAge());
+        }
+    }
 
 }

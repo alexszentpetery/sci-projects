@@ -24,8 +24,6 @@ public class PersonSorter implements SortingMethods {
         }
     }
 
-
-
     //metoda de sortare prin insertie
     public void insertSort(Person[] listaPersoane) {
         for (int i = 0; i < listaPersoane.length; i++) {
@@ -37,18 +35,6 @@ public class PersonSorter implements SortingMethods {
                     listaPersoane[j] = forSwapPerson;
                 }
             }
-        }
-    }
-
-    // adaugat metoda pentru a afisa lista sortata.
-    public void sortList(Person[] listaPersoane) {
-
-
-        for (int i = 0; i < listaPersoane.length; i++) {
-
-            System.out.printf("" + listaPersoane[i].getFirstName());
-            System.out.printf("" + listaPersoane[i].getLastName());
-            System.out.println("" + listaPersoane[i].getAge());
         }
     }
 }
