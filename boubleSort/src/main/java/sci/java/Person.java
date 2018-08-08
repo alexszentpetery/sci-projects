@@ -13,7 +13,7 @@ public class Person implements SorterByAge {
     public Person() {
     }
 
-    public String getFirstName() {
+    public  String getFirstName() {
         return firstName;
     }
 

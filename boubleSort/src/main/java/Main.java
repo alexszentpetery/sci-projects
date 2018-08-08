@@ -25,7 +25,6 @@ public class Main {
         }
 
 
-
         //selectam metoda de sortare
         String operatie;
         Object[] possibilities = {"boubleSort", "insertSort"};
@@ -34,17 +33,22 @@ public class Main {
 
         //sortam in functie de alegere
 
-       SortingMethods sortare = new Sorter();
+        SortingMethods sortare = new Sorter();
+        Main forSorting = new Main;
         if (operatie == "boubleSort") {
             sortare.boubleSort(persoane);
-            sortList(persoane);
-        } else if (operatie == "insertSort") {
+            forSorting.printSortedList(persoane);
+         } else if (operatie == "insertSort") {
             sortare.insertSort(persoane);
-            sortList(persoane);
+            forSorting.printSortedList(persoane);
         }
+        System.out.println();
+
     }
 
-    static  void sortList(Person[] listaPersoane) {
+
+
+    void printSortedList(Person[] listaPersoane) {
 
 
         for (int i = 0; i < listaPersoane.length; i++) {
