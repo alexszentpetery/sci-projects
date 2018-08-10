@@ -12,19 +12,40 @@ public class Main {
         consumers[3] = new SmartHome() {
         };
 
-
         // vreau sa modific brightness la consumers[0] astfel incat sa influenteze consumul
         for (SmartDevice consume : consumers) {
             if (consume instanceof SmartLamp) {
                 SmartLamp lampaMea = (SmartLamp) consume;
                 lampaMea.setBrightValue(100);
+                lampaMea.setColor("red");
             }
         }
 
+        // set pot face operatiuni pe thermostat
+        for (SmartDevice consume : consumers) {
+            if (consume instanceof SmartThermostat) {
+                SmartThermostat termostatulMeu = (SmartThermostat) consume;
+                termostatulMeu.setTemperature(30);
+            }
+        }
 
+        // set pot face operatiuni pe camera de securitate
+
+        for (SmartDevice consume : consumers) {
+            if (consume instanceof SmartSecurityCamera) {
+                SmartSecurityCamera securityCamera = (SmartSecurityCamera) consume;
+                securityCamera.setFilmingStatus(true);
+            }
+        }
+
+        // se calculeaza consumul in functie stare si alti parametri (brightness)
         float totalConsumption = 0;
         for (SmartDevice consume : consumers) {
             consume.turnOn();
+            if (consume instanceof SmartLamp) {
+                SmartLamp lampaMea = (SmartLamp) consume;
+                lampaMea.setBrightValue(100);
+            }
             System.out.println(consume.getClass() + " " + consume.getCONSUMPTION());
             totalConsumption += consume.getCONSUMPTION();
         }
