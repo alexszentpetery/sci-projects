@@ -7,8 +7,6 @@ public class SmartLamp extends SmartHome implements SmartDevice {
 
     @Override
     public double getCONSUMPTION() {
-
-
         if (status && brightValue != 0) {
             this.consumption = (super.DEFAULTCONSUMPTION + 2) + (brightValue / 100);
         } else if (status) {
@@ -25,7 +23,13 @@ public class SmartLamp extends SmartHome implements SmartDevice {
     }
 
     public void setBrightValue(int brightness) {
-        this.brightValue = brightness;
+        if (brightness < 0) {
+            this.brightValue = 0;
+        } else if (brightness > 100) {
+            this.brightValue = 100;
+        } else {
+            this.brightValue = brightness;
+        }
     }
 
     public String getColor() {

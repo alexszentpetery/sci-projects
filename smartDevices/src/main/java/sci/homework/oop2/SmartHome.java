@@ -27,7 +27,6 @@ public abstract class SmartHome implements SmartDevice {
      */
     public double getCONSUMPTION() {
         return status ? DEFAULTCONSUMPTION + 5 : DEFAULTCONSUMPTION;
-
     }
 
     /**
