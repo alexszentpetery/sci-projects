@@ -10,11 +10,11 @@ public class SmartLamp extends SmartHome implements SmartDevice {
 
 
         if (status && brightValue != 0) {
-            this.consumption = (super.CONSUMPTION + 2) + (brightValue / 100);
+            this.consumption = (super.DEFAULTCONSUMPTION + 2) + (brightValue / 100);
         } else if (status) {
-            this.consumption = super.CONSUMPTION + 2;
+            this.consumption = super.DEFAULTCONSUMPTION + 2;
         } else if (status != true) {
-            this.consumption = super.CONSUMPTION;
+            this.consumption = super.DEFAULTCONSUMPTION;
         }
 
         return consumption;

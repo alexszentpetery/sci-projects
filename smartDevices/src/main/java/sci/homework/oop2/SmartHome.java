@@ -5,7 +5,7 @@ package sci.homework.oop2;
  * by defaul toate obiecetele din clasa abstracta SmartHome au un consum de 0.1 pentru modul standby unde asteapta comezi
  */
 public abstract class SmartHome implements SmartDevice {
-    double CONSUMPTION = 0.1;
+    double DEFAULTCONSUMPTION = 0.1;
     boolean status;
 
     /**
@@ -26,7 +26,7 @@ public abstract class SmartHome implements SmartDevice {
      * returneaza consumul de energie al dispozitivului
      */
     public double getCONSUMPTION() {
-        return status ? CONSUMPTION + 5 : CONSUMPTION;
+        return status ? DEFAULTCONSUMPTION + 5 : DEFAULTCONSUMPTION;
 
     }
 

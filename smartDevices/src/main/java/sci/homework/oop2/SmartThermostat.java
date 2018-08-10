@@ -6,7 +6,7 @@ public class SmartThermostat extends SmartHome implements SmartDevice {
 
     @Override
     public double getCONSUMPTION() {
-        return status ? super.CONSUMPTION + CONSUMPTION : super.CONSUMPTION;
+        return status ? super.DEFAULTCONSUMPTION + CONSUMPTION : super.DEFAULTCONSUMPTION;
     }
 
     public int getTemperature() {
