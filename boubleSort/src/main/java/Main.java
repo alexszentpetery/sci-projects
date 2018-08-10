@@ -34,13 +34,13 @@ public class Main {
         //sortam in functie de alegere
 
         SortingMethods sortare = new Sorter();
-        Main forSorting = new Main;
+        Main forPrintingMethod = new Main();
         if (operatie == "boubleSort") {
             sortare.boubleSort(persoane);
-            forSorting.printSortedList(persoane);
+            forPrintingMethod.printSortedList(persoane);
          } else if (operatie == "insertSort") {
             sortare.insertSort(persoane);
-            forSorting.printSortedList(persoane);
+            forPrintingMethod.printSortedList(persoane);
         }
         System.out.println();
 
