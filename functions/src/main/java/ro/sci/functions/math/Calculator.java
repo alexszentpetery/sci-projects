@@ -11,9 +11,8 @@ public class Calculator {
      * @param b
      * @return suma
      */
-    public static Double adunare(double a, double b) {
+    public Double aduna(double a, double b) {
         return a + b;
-
     }
 
     /**
@@ -23,7 +22,7 @@ public class Calculator {
      * @param b
      * @return diferenta
      */
-    public static Double scadere(double a, double b) {
+    public Double scade(double a, double b) {
         return a - b;
     }
 
@@ -34,7 +33,7 @@ public class Calculator {
      * @param b
      * @return inmultirea
      */
-    public static Double inmultire(double a, double b) {
+    public Double inmuleste(double a, double b) {
         return a * b;
     }
 
@@ -46,7 +45,12 @@ public class Calculator {
      * @return impartirea
      */
 
-    public static Double impartire(double a, double b) {
-        return a / b;
+    public Double imparte(double a, double b) {
+        if (b != 0) {
+            return a / b;
+        } else
+            System.out.println("ERROR ---- Impartirea la 0 nu este permisa ----");
+        return null;
+        //people recomand to throw an exception
     }
 }
