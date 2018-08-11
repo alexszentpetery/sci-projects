@@ -11,21 +11,46 @@ public class Main {
         //citim operatiunea care se doreste a se interpreta
 
         String operatie = null;
+
         while (operatie == null) {
-            Object[] possibilities = {"aduna", "scade", "inmuleste", "imparte"};
+            Object[] possibilities = {"aduna", "scade", "inmulteste", "imparte"};
             operatie = (String) JOptionPane.showInputDialog(null, "Ce operatiune doriti sa facem ?", "Selector Operatiune",
                     JOptionPane.PLAIN_MESSAGE, null, possibilities, "aduna");
         }
 
+
         // Citim variabila 1
         String primaVariabila = JOptionPane.showInputDialog(null, "Introduceti prima valoare?");
-        Double x = valideaza(primaVariabila);
+        boolean test = false;
+        while (test == false) {
+            try {
+                Double testTry = Double.parseDouble(primaVariabila);
+                test = true;
+            } catch (Exception e) {
+                JOptionPane.showMessageDialog(null, "Valoarea introdusa nu e corecta");
+                primaVariabila = JOptionPane.showInputDialog(null, "Introduceti prima valoare?");
+
+            }
+        }
+        Double x = Double.parseDouble(primaVariabila);
 
         // Citim variabila 2
         String aDouaVariabila = JOptionPane.showInputDialog(null, "Introduceti a doua valoare?");
-        Double y = valideaza(aDouaVariabila);
+
+        test = false;
+        while (test == false) {
+            try {
+                Double testTry = Double.parseDouble(aDouaVariabila);
+                test = true;
+            } catch (Exception e) {
+                JOptionPane.showMessageDialog(null, "Valoarea introdusa nu e corecta");
+                aDouaVariabila = JOptionPane.showInputDialog(null, "Introduceti a doua valoare?");
+            }
+        }
+        Double y = Double.parseDouble(aDouaVariabila);
 
         // nu se poate face abort la program !! trebuie neaparat introduse valori , esc ar trebui sa faca break...
+
         Calculator calculator = new Calculator();
 
         // folosim swith pentru a chema doar methoda solicitata
@@ -40,28 +65,13 @@ public class Main {
             case "imparte":
                 System.out.println("imparte:  " + x + " / " + y + " = " + calculator.imparte(x, y));
                 break;
-            case "inmuleste":
-                System.out.println("inmuleste : " + x + " * " + y + " = " + calculator.inmuleste(x, y));
+            case "inmulteste":
+                System.out.println("inmulteste : " + x + " * " + y + " = " + calculator.inmulteste(x, y));
                 break;
+
             default:
                 JOptionPane.showMessageDialog(null, "Operatiune incorecta");
                 break;
         }
     }
-
-
-    private static double valideaza(String primaVariabila) {
-        boolean test = false;
-        while (test == false) {
-            try {
-                Double testTry = Double.parseDouble(primaVariabila);
-                test = true;
-            } catch (Exception e) {
-                JOptionPane.showMessageDialog(null, "Valoarea introdusa nu e corecta");
-                primaVariabila = JOptionPane.showInputDialog(null, "Introduceti prima valoare?");
-            }
-        }
-        return Double.parseDouble(primaVariabila);
-    }
-
 }

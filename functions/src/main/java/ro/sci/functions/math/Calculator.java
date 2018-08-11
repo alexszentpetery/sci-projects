@@ -33,7 +33,7 @@ public class Calculator {
      * @param b
      * @return inmultirea
      */
-    public Double inmuleste(double a, double b) {
+    public Double inmulteste(double a, double b) {
         return a * b;
     }
 
