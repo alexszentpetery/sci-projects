@@ -20,34 +20,15 @@ public class Main {
 
 
         // Citim variabila 1
-        String primaVariabila = JOptionPane.showInputDialog(null, "Introduceti prima valoare?");
-        boolean test = false;
-        while (test == false) {
-            try {
-                Double testTry = Double.parseDouble(primaVariabila);
-                test = true;
-            } catch (Exception e) {
-                JOptionPane.showMessageDialog(null, "Valoarea introdusa nu e corecta");
-                primaVariabila = JOptionPane.showInputDialog(null, "Introduceti prima valoare?");
 
-            }
-        }
-        Double x = Double.parseDouble(primaVariabila);
+        Main numbers = new Main();
+        String primaVariabila = JOptionPane.showInputDialog(null, "Introduceti prima valoare?");
+        Double x = numbers.valideaza(primaVariabila);
 
         // Citim variabila 2
         String aDouaVariabila = JOptionPane.showInputDialog(null, "Introduceti a doua valoare?");
 
-        test = false;
-        while (test == false) {
-            try {
-                Double testTry = Double.parseDouble(aDouaVariabila);
-                test = true;
-            } catch (Exception e) {
-                JOptionPane.showMessageDialog(null, "Valoarea introdusa nu e corecta");
-                aDouaVariabila = JOptionPane.showInputDialog(null, "Introduceti a doua valoare?");
-            }
-        }
-        Double y = Double.parseDouble(aDouaVariabila);
+        Double y = numbers.valideaza(aDouaVariabila);
 
         // nu se poate face abort la program !! trebuie neaparat introduse valori , esc ar trebui sa faca break...
 
@@ -74,4 +55,21 @@ public class Main {
                 break;
         }
     }
+
+    public double valideaza(String variabila) {
+        boolean test = false;
+        while (test == false) {
+            try {
+                Double testTry = Double.parseDouble(variabila);
+                test = true;
+            } catch (Exception e) {
+                JOptionPane.showMessageDialog(null, "Valoarea introdusa nu e corecta");
+                variabila = JOptionPane.showInputDialog(null, "Introduceti valoarea din nou");
+
+            }
+        }
+        return Double.parseDouble(variabila);
+
+    }
+
 }
