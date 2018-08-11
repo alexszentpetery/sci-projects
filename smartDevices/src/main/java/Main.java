@@ -16,6 +16,7 @@ public class Main {
         for (SmartDevice consume : consumers) {
             if (consume instanceof SmartLamp) {
                 SmartLamp lampaMea = (SmartLamp) consume;
+                lampaMea.turnOn();
                 lampaMea.setBrightValue(100);
                 lampaMea.setColor("red");
             }
@@ -25,6 +26,7 @@ public class Main {
         for (SmartDevice consume : consumers) {
             if (consume instanceof SmartThermostat) {
                 SmartThermostat termostatulMeu = (SmartThermostat) consume;
+                termostatulMeu.turnOn();
                 termostatulMeu.setTemperature(30);
             }
         }
@@ -34,6 +36,7 @@ public class Main {
         for (SmartDevice consume : consumers) {
             if (consume instanceof SmartSecurityCamera) {
                 SmartSecurityCamera securityCamera = (SmartSecurityCamera) consume;
+                securityCamera.turnOn();
                 securityCamera.setFilmingStatus(true);
             }
         }
@@ -44,7 +47,7 @@ public class Main {
             consume.turnOn();
             if (consume instanceof SmartLamp) {
                 SmartLamp lampaMea = (SmartLamp) consume;
-                lampaMea.setBrightValue(100);
+                lampaMea.setBrightValue(50);
             }
             System.out.println(consume.getClass() + " " + consume.getCONSUMPTION());
             totalConsumption += consume.getCONSUMPTION();

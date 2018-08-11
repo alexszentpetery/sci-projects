@@ -1,11 +1,11 @@
 package sci.homework.oop2;
 
 /**
- * device smart care mosteneste clasa SmartHome
+ * device smart care mosteneste clasa SmartHome plus functiile specifice unui smart termostat
  */
 public class SmartThermostat extends SmartHome implements SmartDevice {
-    int temperature;
-    double CONSUMPTION = 3;
+    private int temperature;
+    private double CONSUMPTION = 3;
 
     /**
      * metoda pentru calculul consumului , daca este in standby mosteneste consumul default (de la clasa parinte)
@@ -20,7 +20,6 @@ public class SmartThermostat extends SmartHome implements SmartDevice {
 
     /**
      * metoda pentru a returna temperatura setata
-     *
      */
     public int getTemperature() {
         return temperature;
@@ -32,7 +31,8 @@ public class SmartThermostat extends SmartHome implements SmartDevice {
      * @returneaza temperature
      */
     public void setTemperature(int temperature) {
-        this.temperature = temperature;
+        if (status) {
+            this.temperature = temperature;
+        } else System.out.println("dispozitivul este oprit");
     }
-
 }
