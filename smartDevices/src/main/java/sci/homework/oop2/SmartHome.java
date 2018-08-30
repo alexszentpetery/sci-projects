@@ -36,5 +36,5 @@ public abstract class SmartHome implements SmartDevice {
         return status;
     }
 
-    public
+    
 }
