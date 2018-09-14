@@ -18,10 +18,20 @@ public class StringToInt {
 
         String[] splitAfter = before.split("\\s+");
         for (String test : splitAfter) {
-            System.out.println(test);
-            test = test.replaceAll("(?i)one", "1").replaceAll("(?i)two", "2").replaceAll("(?i)three", "3").replaceAll("(?i)four", "4")
-                    .replaceAll("(?i)five", "5").replaceAll("(?i)six", "6").replaceAll("(?i)seven", "7").replaceAll("(?i)eight", "8")
-                    .replaceAll("(?i)nine", "9");
+            if (test.indexOf(0) = 0) {
+
+
+                test = test.replaceAll("(?i)one", "1").replaceAll("(?i)two", "2").replaceAll("(?i)three", "3").replaceAll("(?i)four", "4")
+                        .replaceAll("(?i)five", "5").replaceAll("(?i)six", "6").replaceAll("(?i)seven", "7").replaceAll("(?i)eight", "8")
+                        .replaceAll("(?i)nine", "9");
+
+            } else {
+                test = test.replaceAll("(?i)one", "1").replaceAll("(?i)two", "2").replaceAll("(?i)three", "3").replaceAll("(?i)four", "4")
+                        .replaceAll("(?i)five", "5").replaceAll("(?i)six", "6").replaceAll("(?i)seven", "7").replaceAll("(?i)eight", "8")
+                        .replaceAll("(?i)nine", "9");
+
+            }
+
             System.out.println(test);
         }
 
