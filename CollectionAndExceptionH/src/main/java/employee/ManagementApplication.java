@@ -23,13 +23,7 @@ public class ManagementApplication {
 
     public Map<String, List<Employee>> createRolesList() {
 
-        Set<String> employeeRoles = new HashSet<String>();
-        for (Employee angajat : Employee.listAngajati) {
-            employeeRoles.add(angajat.getRole());
-        }
-
         Map<String, List<Employee>> treeMap = new HashMap<>();
-
         for (Employee angajat : Employee.listAngajati) {
             if (treeMap.containsKey(angajat.getRole())) {
                 treeMap.get(angajat.getRole()).add(angajat);
