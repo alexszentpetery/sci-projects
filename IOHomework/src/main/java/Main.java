@@ -1,7 +1,4 @@
-import sales.products.ProductReader;
-import sales.products.ProductStatistics;
-import sales.products.ProductStatisticsExporter;
-import sales.products.Sales;
+import sales.products.*;
 
 import java.io.*;
 import java.nio.file.Files;
@@ -22,6 +19,7 @@ public class Main {
 
         List<Sales> products = new ProductReader(fr).getProducts();
         ProductStatistics listByProductsSold = new ProductStatistics();
+
 
         ProductStatisticsExporter exporter = new ProductStatisticsExporter();
         exporter.writeToFile(listByProductsSold, products);

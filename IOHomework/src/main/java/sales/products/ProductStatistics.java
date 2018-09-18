@@ -22,7 +22,6 @@ public class ProductStatistics {
             }
         }
         Map<String, Integer> sortedMapByProducts = getStringIntegerMap(produse);
-
         return sortedMapByProducts;
     }
 
@@ -39,7 +38,6 @@ public class ProductStatistics {
             }
         }
         Map<String, Integer> sortedMapByClients = getStringIntegerMap(produse);
-
         return sortedMapByClients;
     }
 
@@ -58,8 +56,6 @@ public class ProductStatistics {
         }
 
         Map<String, Integer> sortedMapByTopClients = getStringIntegerMap(produse);
-
-
         return sortedMapByTopClients;
     }
 

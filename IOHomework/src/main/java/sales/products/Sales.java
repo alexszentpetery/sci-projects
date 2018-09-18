@@ -8,7 +8,6 @@ public class Sales {
     private int productPrice;
     private String clientName;
 
-
     public Sales(int orderNumber, String productName, int price, String clientName) {
         this.orderNumber = orderNumber;
         this.productName = productName;
