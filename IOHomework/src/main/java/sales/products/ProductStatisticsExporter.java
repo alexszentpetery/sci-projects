@@ -5,7 +5,7 @@ import java.util.*;
 
 public class ProductStatisticsExporter {
 
-    public void writeToFile(ProductStatistics statisticaDePrintat, List<Sales> sales) throws IOException {
+    public void writeToFile(SalesStatistics statisticaDePrintat, List<Sales> sales) throws IOException {
         File f = new File("C:\\temp\\sci\\stats.txt");
         if (f.exists()) {
             f.delete();
@@ -36,6 +36,8 @@ public class ProductStatisticsExporter {
                 bw.newLine();
                 i += 1;
             }
+            bw.append("...");
+            bw.newLine();
         }
     }
 

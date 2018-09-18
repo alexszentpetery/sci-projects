@@ -1,28 +1,24 @@
 import sales.products.*;
 
 import java.io.*;
-import java.nio.file.Files;
-import java.nio.file.Path;
 import java.util.List;
 
 public class Main {
     public static void main(String[] args) throws IOException {
 
         File f = new File("C:\\Temp\\sci\\products.csv");
-        Path path = f.toPath();
-        List<String> strings = Files.readAllLines(path);
         if (!f.exists()) {
             System.out.println("File " + f.getName() + " does not exist.");
             return;
         }
         FileReader fr = new FileReader(f);
 
-        List<Sales> products = new ProductReader(fr).getProducts();
-        ProductStatistics listByProductsSold = new ProductStatistics();
+        List<Sales> sales = new SalesReader(fr).getSales();
+        SalesStatistics listOfSales = new SalesStatistics();
 
 
         ProductStatisticsExporter exporter = new ProductStatisticsExporter();
-        exporter.writeToFile(listByProductsSold, products);
+        exporter.writeToFile(listOfSales, sales);
 
 
     }
