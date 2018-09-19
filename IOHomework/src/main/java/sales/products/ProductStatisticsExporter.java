@@ -4,6 +4,10 @@ import java.io.*;
 import java.util.*;
 
 public class ProductStatisticsExporter {
+    /**
+     * This method creates the file and calls the function to write for each map and with given parameters
+     * Parameters are used for the file to customize lines in the file.
+     */
 
     public void writeToFile(SalesStatistics statisticaDePrintat, List<Sales> sales) throws IOException {
         File f = new File("C:\\temp\\sci\\stats.txt");

@@ -8,6 +8,10 @@ public class SalesStatistics {
     public SalesStatistics() {
     }
 
+    /**
+     * This method gets number of units sold for each product
+     * Create a map with key: productName and a counter which increments when a sale was done
+     */
 
     public Map<String, Integer> sortByNumberOfProducts(List<Sales> sales) {
         Map<String, Integer> produse = new HashMap<>();
@@ -25,6 +29,12 @@ public class SalesStatistics {
         return sortedMapByProducts;
     }
 
+
+    /**
+     * This method gets number of order has done each client
+     * Create a map with key: client name  and a counter which increments when a order was done by a particular client
+     */
+
     public Map<String, Integer> sortByNumberOfByClients(List<Sales> sales) {
         Map<String, Integer> produse = new HashMap<>();
         Integer counter;
@@ -41,6 +51,10 @@ public class SalesStatistics {
         return sortedMapByClients;
     }
 
+    /**
+     * This method gets a map with total sales done for each client
+     * Create a map with key: client name  and calculates how much money have spent
+     */
 
     public Map<String, Integer> sortByNumberOfByTopClients(List<Sales> sales) {
         Map<String, Integer> produse = new HashMap<>();
@@ -58,6 +72,11 @@ public class SalesStatistics {
         Map<String, Integer> sortedMapByTopClients = getStringIntegerMap(produse);
         return sortedMapByTopClients;
     }
+
+    /**
+     * This method sorts a map by value .
+     */
+
 
     private Map<String, Integer> getStringIntegerMap(Map<String, Integer> produse) {
         return produse.entrySet().stream()
