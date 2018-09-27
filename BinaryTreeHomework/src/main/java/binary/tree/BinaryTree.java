@@ -28,6 +28,9 @@ public class BinaryTree<E extends Comparable<E>> implements Comparable<E> {
             //      System.out.println(nodes);
 
         }
+        System.out.println("Sorted node :");
+        traverseInOrder(rootNod);
+
     }
 
     // we recevei root node and the first intem from the list
@@ -59,6 +62,15 @@ public class BinaryTree<E extends Comparable<E>> implements Comparable<E> {
             }
         }
     }
+
+    public void traverseInOrder(Node node) {
+        if (node != null) {
+            traverseInOrder(node.getLeftValue());
+            System.out.print(" " + node.getValue());
+            traverseInOrder(node.getRightValue());
+        }
+    }
+
 
     public int compareTo(E o) {
         return nod.getValue().compareTo(o);
