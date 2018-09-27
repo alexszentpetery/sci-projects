@@ -25,8 +25,6 @@ public class BinaryTree<E extends Comparable<E>> implements Comparable<E> {
         }
         for (Node nodes : nodeList) {
             nodes.printNode();
-            //      System.out.println(nodes);
-
         }
         System.out.println("Sorted node :");
         traverseInOrder(rootNod);

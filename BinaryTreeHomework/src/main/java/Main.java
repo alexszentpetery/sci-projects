@@ -1,5 +1,6 @@
 import binary.tree.BinaryTree;
 import binary.tree.Node;
+import binary.tree.Person;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,39 +8,45 @@ import java.util.List;
 public class Main extends Thread {
 
     public static void main(String[] args) {
-        BinaryTree lista = new BinaryTree();
+        BinaryTree treeList = new BinaryTree();
 
-        lista.add("f");
-        lista.add("d");
-        lista.add("b");
-        lista.add("a");
-        lista.add("t");
-        lista.add("u");
-        lista.add("m");
-        lista.add("n");
-        lista.add("e");
-        lista.add("g");
-        lista.add("r");
-        lista.add("o");
-
+//        treeList.add("f");
+//        treeList.add("d");
+//        treeList.add("b");
+//        treeList.add("a");
+//        treeList.add("t");
+//        treeList.add("u");
+//        treeList.add("m");
+//        treeList.add("n");
+//        treeList.add("e");
+//        treeList.add("g");
+//        treeList.add("r");
+//        treeList.add("o");
 //
-//        lista.add(5);
-//        lista.add(12);
-//        lista.add(3);
-//        lista.add(1);
-//        lista.add(11);
-//        lista.add(9);
-//        lista.add(29);
-//        lista.add(7);
-//        lista.add(50);
-//        lista.add(18);
-//        lista.add(33);
-//            lista.add(4);
-        lista.createNodeList();
-///
+//        treeList.add(5);
+//        treeList.add(12);
+//        treeList.add(3);
+//        treeList.add(1);
+//        treeList.add(11);
+//        treeList.add(9);
+//        treeList.add(29);
+//        treeList.add(7);
+//        treeList.add(50);
+//        treeList.add(18);
+//        treeList.add(33);
+//        treeList.add(4);
+//        treeList.createNodeList();
+        Person alex = new Person("alex",25);
+        Person ionut = new Person("ionut",2);
+        Person ilie = new Person("ilie",27);
+        Person misu = new Person("misu",26);
 
+        treeList.add(alex);
+        treeList.add(ionut);
+        treeList.add(ilie);
+        treeList.add(misu);
 
-
+        treeList.createNodeList();
     }
 
 }
