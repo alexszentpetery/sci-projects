@@ -1,6 +1,6 @@
 package binary.tree;
 
-public class Node<E extends Comparable<E>> implements Comparable<Node<E>> {
+public class Node<E extends Comparable<E>> {
     private Node leftValue;
     private Node rightValue;
     private E value;
@@ -81,13 +81,8 @@ public class Node<E extends Comparable<E>> implements Comparable<Node<E>> {
         }
     }
 
-//    public int compareTo(Node<E> o) {
-//        return getValue().compareTo(o.getValue());
-//    }
 
-
-    @Override
     public int compareTo(Node o) {
-        return value.compareTo((E) o.getValue());
+        return this.value.compareTo((E) o.getValue());
     }
 }

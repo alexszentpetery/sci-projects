@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class BinaryTree<E extends Comparable<E>> implements Comparable<E> {
+public class BinaryTree<E extends Comparable<E>> {
     List<Node> nodeList = new ArrayList<Node>();
-    private Node nod;
+    private Node<E> nod;
     private E value;
     private List<E> list = new ArrayList<E>();
 
@@ -24,6 +24,7 @@ public class BinaryTree<E extends Comparable<E>> implements Comparable<E> {
             createNode(list.get(i), rootNod);
         }
         for (Node nodes : nodeList) {
+            System.out.println(nodes);
             nodes.printNode();
         }
         System.out.println("Sorted node :");
@@ -41,6 +42,7 @@ public class BinaryTree<E extends Comparable<E>> implements Comparable<E> {
                 nod = new Node(integer);
                 givenNode.setRightValue(nod);
                 nodeList.add(nod);
+                return;
             } else {
                 //if the right side of the initial node is not empty , we call again this function but changing root = right side node
                 createNode(integer, givenNode.getRightValue());
@@ -53,6 +55,7 @@ public class BinaryTree<E extends Comparable<E>> implements Comparable<E> {
                 nod = new Node(integer);
                 givenNode.setLeftValue(nod);
                 nodeList.add(nod);
+                return;
             }
             //if the left side of the initial node is not empty , we call again this function but changing root = side side node
             else {
